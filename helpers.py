@@ -198,12 +198,20 @@ def get_dict(*keys, **extras):
     except (ValueError, TypeError):
         _json = None
 
+    # clean up the redundant entries made by SAE
+    ip_str = request.headers.get('X-Forwarded-For', request.remote_addr)
+    ip_lis = [ip.strip() for ip in ip_str.split(',')]
+    origin = ip_lis[0]
+    for i in range(1, len(ip_lis)):
+        if ip_lis[i] != ip_lis[i - 1]:
+            origin += ', ' + ip_lis[i]
+
     d = dict(
         url=get_url(request),
         args=semiflatten(request.args),
         form=form,
         data=json_safe(data),
-        origin=request.headers.get('X-Forwarded-For', request.remote_addr),
+        origin=origin,
         headers=get_headers(),
         files=get_files(),
         json=_json
