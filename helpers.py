@@ -61,6 +61,7 @@ ENV_HEADERS = (
     # SAE
     'Accesskey',
     'Appcookie',
+    'Appversion'
     'Apphash',
     'Appname',
     'Appsrvc',
