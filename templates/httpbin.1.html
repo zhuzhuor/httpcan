@@ -52,17 +52,17 @@ scenarios. Additional endpoints are being considered.</p>
 
 <h2 id="EXAMPLES">EXAMPLES</h2>
 
-<h3 id="-curl-http-httpbin-org-ip">$ curl http://httpbin.org/ip</h3>
+<h3 id="-curl-http-httpbin-org-ip">$ curl http://httpcan.sinaapp.com/ip</h3>
 
 <pre><code>{"origin": "24.127.96.129"}
 </code></pre>
 
-<h3 id="-curl-http-httpbin-org-user-agent">$ curl http://httpbin.org/user-agent</h3>
+<h3 id="-curl-http-httpbin-org-user-agent">$ curl http://httpcan.sinaapp.com/user-agent</h3>
 
 <pre><code>{"user-agent": "curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8l zlib/1.2.3"}
 </code></pre>
 
-<h3 id="-curl-http-httpbin-org-get">$ curl http://httpbin.org/get</h3>
+<h3 id="-curl-http-httpbin-org-get">$ curl http://httpcan.sinaapp.com/get</h3>
 
 <pre><code>{
    "args": {},
@@ -71,15 +71,15 @@ scenarios. Additional endpoints are being considered.</p>
       "Connection": "close",
       "Content-Length": "",
       "Content-Type": "",
-      "Host": "httpbin.org",
+      "Host": "httpcan.sinaapp.com",
       "User-Agent": "curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8l zlib/1.2.3"
    },
    "origin": "24.127.96.129",
-   "url": "http://httpbin.org/get"
+   "url": "http://httpcan.sinaapp.com/get"
 }
 </code></pre>
 
-<h3 id="-curl-I-http-httpbin-org-status-418">$ curl -I http://httpbin.org/status/418</h3>
+<h3 id="-curl-I-http-httpbin-org-status-418">$ curl -I http://httpcan.sinaapp.com/status/418</h3>
 
 <pre><code>HTTP/1.1 418 I'M A TEAPOT
 Server: nginx/0.7.67
@@ -89,7 +89,7 @@ x-more-info: http://tools.ietf.org/html/rfc2324
 Content-Length: 135
 </code></pre>
 
-<h3 id="-curl-https-httpbin-org-get-show_env-1">$ curl https://httpbin.org/get?show_env=1</h3>
+<h3 id="-curl-https-httpbin-org-get-show_env-1">$ curl https://httpcan.sinaapp.com/get?show_env=1</h3>
 
 <pre><code>{
   "headers": {
@@ -99,7 +99,7 @@ Content-Length: 135
     "X-Forwarded-Port": "443",
     "X-Forwarded-For": "109.60.101.240",
     "X-Heroku-Dynos-In-Use": "1",
-    "Host": "httpbin.org",
+    "Host": "httpcan.sinaapp.com",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "User-Agent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.83 Safari/535.11",
     "X-Request-Start": "1350053933441",
@@ -115,7 +115,7 @@ Content-Length: 135
     "show_env": "1"
   },
   "origin": "109.60.101.240",
-  "url": "http://httpbin.org/get?show_env=1"
+  "url": "http://httpcan.sinaapp.com/get?show_env=1"
 }
 </code></pre>
 
